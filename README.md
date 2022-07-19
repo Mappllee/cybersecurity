@@ -4,3 +4,4 @@
 
 ## Projects
 We have Completed the following projects：
+- implement the naïve birthday attack of reduced SM3
