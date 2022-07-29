@@ -58,22 +58,22 @@ def proof(message,proof_node,root):
 
 print("#------------------------------------------------------------#")
 
-message_2 = create_message(100000)
-tree_2 = create_merkletree(message_2)
+message = create_message(100000)
+tree = create_merkletree(message)
 print("已经生成100000节点的树")
 
 place = random.randint(0,99999)
 print("选取随机消息:")
 print("位置:",place)
-print("消息:",message_2[place])
+print("消息:",message[place])
 
 
 print("#------------------------------------------------------------#")
 print("从最低到根节点的路径：")
-proof_node = verify_node(message_2[place],tree_2)
+proof_node = verify_node(message[place],tree)
 for i in proof_node:
     print(i)
 print("#------------------------------------------------------------#")
 print("使用proof nodes去验证消息：")
 
-proof(message_2[place],proof_node,tree_2[-1][0])
+proof(message[place],proof_node,tree[-1][0])
